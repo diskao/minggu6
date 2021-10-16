@@ -32,8 +32,11 @@
                                 <td>{{ $s->class }}</td>
                                 <td>
 
-                                    <form action="students/{{$s->id}}" method="post">
-                                        <a href="/students/{{$s->id}}/edit" class="btn btnwarning">Edit</a>    
+                                    <form action="/students/{{$s->id}}" method="post">
+                                        <a href="/students/{{$s->id}}/edit" class="btn btnwarning">Edit</a>
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" name="delete" class="btn btndanger">Delete</button>
                                     </form>
                                 </td>    
                             </tr>
