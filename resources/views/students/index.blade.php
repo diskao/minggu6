@@ -24,7 +24,7 @@
 
                     @if ($message = Session::get('success'))
                     <div class="alert-success">
-                        <p> {{ message }}</p>
+                        <p> {{ message }} </p>
                     </div>
                     @endif
                     
@@ -45,7 +45,7 @@
                             <tr>
                                 <td>{{ $s->nim }}</td>
                                 <td>{{ $s->name }}</td>
-                                <td>{{ $s->class }}</td>
+                                <td>{{ $s->kelas->class_name }}</td>
                                 <td>{{ $s->department }}</td>
                                 <td>
 
