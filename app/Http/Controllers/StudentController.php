@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Student;
 use App\Models\Kelas;
+use App\Models\Course;
 
 class StudentController extends Controller
 {
@@ -126,5 +127,11 @@ class StudentController extends Controller
         $keyword = $request->search;
         $student = Student::where('name', 'like', '%' . $keyword . "%")->paginate(5);
         return view('students.index', compact('student'))->with('i', (request()->input('page', 1) - 1) *5);
+    }
+
+    public function detail($id)
+    {
+        $student = Student::find($id);
+        return view('students.detail', ['student' => $student]);
     }
 }
