@@ -30,4 +30,4 @@ Route::get('/search', [App\Http\Controllers\StudentController::class, 'search'])
 
 Route::resource('users', UserController::class);
 
-Route::get('/students/{id}/detail', [StudentController::class, 'detail']);
+Route::get('students/{id}/detail', [StudentController::class, 'detail']); 

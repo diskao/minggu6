@@ -12,6 +12,7 @@
                             {{ session('status') }}
                             </div>
                         @endif
+                        <img width="200px" src="{{asset('storage/'. $student->photo)}}"><br><br>
                             Name : {{ $student->name }} <br>
                             Class : {{ $student->kelas->class_name }} <br>
                             Department : {{ $student->department }} <br>
