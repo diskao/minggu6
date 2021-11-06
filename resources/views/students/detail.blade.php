@@ -32,6 +32,7 @@
                             @endforeach
                         </tbody>
                     </table>
+                    <a href="/students/{{$student->id}}/report" class="btn btn-primary float-right" target="_blank">PRINT PDF</a>
                 </div>
             </div>
         </div>
